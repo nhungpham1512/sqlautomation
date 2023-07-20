@@ -17,7 +17,7 @@ public class ketnoiDB {
 
         try{
             conn = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName= QLSV ;encrypt=true; trustServerCertificate=true", user, pass);
-            String sql ="INSERT INTO DMSV (MaSV,HoSV,TenSV,Phai,NgaySinh,NoiSinh,MaKhoa,HocBong,MaMH)" + " VALUES('A24',Nguyen','Van An','05-07-1994','Hà Nội','Vl',Null,'04)";
+            String sql ="INSERT INTO DMSV (MaSV,HoSV,TenSV,Phai,NgaySinh,NoiSinh,MaKhoa,HocBong,MaMH)" + " VALUES('A24','Nguyen','Van An','Nam','05-07-1994','Hà Nội','Vl',Null,'04')";
             Statement statement = conn.createStatement();
             int rows = statement.executeUpdate(sql);
 
