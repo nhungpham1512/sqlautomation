@@ -15,19 +15,9 @@ public class ketnoiDB {
         try{
             conn = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName= QLSV ;encrypt=true; trustServerCertificate=true", user, pass);
 //Option 1:
-//            String sql ="INSERT INTO DMSV (MaSV,HoSV,TenSV,Phai,NgaySinh,NoiSinh,MaKhoa,HocBong,MaMH)" + " VALUES('A25','Nguyen','Khanh Vy','Nam','05-05-1995','Hà Nội','Vl',Null,'04')";
-//            Statement statement = conn.createStatement();
-//            int rows = statement.executeUpdate(sql);
-//Option 2:
-            String sql ="INSERT INTO DMSV (MaSV,HoSV,TenSV,Phai,NgaySinh,MaMH)" + " VALUES(?,?,?,?,?,?)";
-            PreparedStatement statement = conn.prepareStatement(sql);
-            statement.setString(1,"A28");
-            statement.setString(2,"Pham");
-            statement.setString(3,"Nhung");
-            statement.setString(4,"Nu");
-            statement.setString(5,"12-10-1996");
-            statement.setString(6,"04");
-            int rows = statement.executeUpdate();
+            String sql ="INSERT INTO DMSV (MaSV,HoSV,TenSV,Phai,NgaySinh,NoiSinh,MaKhoa,HocBong,MaMH)" + " VALUES('A32','Pham','Tuan Tai','Nam','25-11-1999','Ha Noi','Vl',Null,'04')";
+            Statement statement = conn.createStatement();
+            int rows = statement.executeUpdate(sql);
 
             if (rows >0) {
                 System.out.println("row has been inserted.");
